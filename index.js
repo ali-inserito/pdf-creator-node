@@ -16,6 +16,7 @@ app.get('/name', (req,res) => {
 
 app.post("/pdf", (req, res) => {
 
+  console.log('req body :', req.body)
   const document = req.body.document;
   const options = req.body.options;
 
