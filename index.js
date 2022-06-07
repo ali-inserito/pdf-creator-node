@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const pdf = require("pdf-creator-node");
+const bodyParser = require("body-parser");
 
+app.use(bodyParser.json());
 
 
 app.listen(port, () => {
@@ -16,7 +18,7 @@ app.get('/name', (req,res) => {
 
 app.post("/pdf", (req, res) => {
 
-  console.log('req body :', req.body)
+  console.log('req body :', req)
   const document = req.body.document;
   const options = req.body.options;
 
