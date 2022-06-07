@@ -4,7 +4,7 @@ const port = 3000;
 const pdf = require("pdf-creator-node");
 const bodyParser = require("body-parser");
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '50mb' }))
 
 
 app.listen(port, () => {
