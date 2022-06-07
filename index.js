@@ -18,10 +18,8 @@ app.get('/name', (req,res) => {
 
 app.post("/pdf", (req, res) => {
 
-  console.log('req body :', req.body)
-  const parsedBody = JSON.parse(req.body);
-  const document = parsedBody.document;
-  const options = parsedBody.options;
+const document = req.body.document;
+const options = req.body.options;
 
   pdf
   .create(document, options)
