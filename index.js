@@ -10,7 +10,7 @@ app.listen(port, () => {
 });
 
 
-app.post('/name'), (req,res) => {
+app.get('/name'), (req,res) => {
   res.status(200).send('My name is Ali Abdullah Azhar')
 }
 
