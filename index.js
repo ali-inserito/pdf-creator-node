@@ -24,7 +24,7 @@ const options = req.body.options;
   pdf
   .create(document, options)
   .then((pdf) => {
-    res.status(200).json(pdf)
+    res.status(200).json(Buffer.from(pdf).toString('base64'))
   })
   .catch((error) => {
     res.status(500).json(error)
